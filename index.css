@@ -96,18 +96,6 @@ li {
   display: none;
 }
 
-.wad-row-button {
-  margin-top: 18px !important;
-  margin: 40px 12%;
-  text-align: center;
-  margin-top: 32px !important;
-}
-
-.wad-row-button:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .wad-row-button {
   margin-top: 18px !important;
