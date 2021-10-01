@@ -33,9 +33,15 @@ h1 {
   text-align: center;
 }
 
-h1 {
+
+h2 {
+  font-size: 30px !important;
   color: #336699;
+  font-weight: bold !important;
+  text-align: center;
 }
+
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -69,6 +75,11 @@ li {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+}
+
+.wad-row object {
+  width:137.5px; 
+  height: 53.5px;
 }
 
 .wad-column-head {
@@ -170,7 +181,7 @@ select.account {
   align-items: center;
 }
 
-.wad-pageroutes h1 {
+.wad-pageroutes h2 {
   color: #336699;
 }
 
@@ -206,6 +217,10 @@ select.account {
 .wad-qbox p {
   font-size: 22px;
   font-weight: 500;
+}
+
+.wad-qbox ul {
+  margin-left: 48px;
 }
 
 .wad-qbox li {
@@ -380,7 +395,7 @@ input[type="radio"] {
   color: #90a4bf;
 }
 
-input[type="search1"] {
+input[type="search2"] {
   border-radius: 5px;
   padding: 12px 10px 0px 71px;
   width: 780px;
@@ -393,7 +408,7 @@ input[type="search1"] {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-input[type="search1"] {
+input[type="search2"] {
   border-radius: 5px;
   padding: 12px 10px 0px 71px;
   width: 780px;
@@ -482,7 +497,7 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
-  h1 {
+  h2 {
     font-size: 26px !important;
     margin: auto 60px !important;
   }
@@ -532,6 +547,10 @@ input[type="submit"] {
   .wad-form-input {
     margin-left: -80px !important;
     margin-right: -50px !important;
+  }
+
+  .wad-form-input input {
+    width: 77% !important;
   }
 
   .hamburger {
@@ -638,6 +657,7 @@ input[type="submit"] {
 
   .wad-form-input input {
     background-color: #f6f9fe;
+    width: 77%;
   }
 
   .wad-search-flight-btn {
@@ -883,6 +903,8 @@ input[type="submit"] {
 
   .wad-form-input input {
     background-color: #f6f9fe;
+    width: 77%;
+    
   }
 
   .wad-search-flight-btn {
@@ -981,12 +1003,12 @@ input[type="submit"] {
 }
 
 @media only screen and (max-width: 480px) {
-  h1 {
+  h2 {
     font-size: 20px !important;
     margin-left: 16px !important;
     margin-right: 16px !important;
   }
-  h1 {
+  h2 {
     font-size: 20px !important;
   }
   .wad-row-button {
@@ -1036,6 +1058,10 @@ input[type="submit"] {
   .wad-form-input {
     margin-left: -80px !important;
     margin-right: -25px !important;
+  }
+
+  .wad-form-input input {
+    width: 77%;
   }
 
   .wad-search-flight-btn {
@@ -1135,10 +1161,14 @@ input[type="submit"] {
   margin-top: 100px;
 }
 
+.wad-faq h2{
+  margin: auto 60px;
+}
+
 .wad-container-faq {
   margin: 40px 168px;
 }
-.wad-container-faq h1 {
+.wad-container-faq h2 {
   color: #245489;
   font-weight: 600;
   font-size: 30px;
@@ -1215,12 +1245,12 @@ input[type="submit"] {
     margin: 8px 16px 4px 16px !important;
   }
 
-  .wad-container-faq h1 {
+  .wad-container-faq h2 {
     font-size: 18px;
     margin-bottom: 8px;
   }
 
-  .wad-faq h1 {
+  .wad-faq h2 {
     font-size: 18px;
     margin-bottom: 8px;
     margin-top: 30px;
@@ -1327,7 +1357,6 @@ input[type="submit"] {
 .wad-search-button-routes {
   background-color: red;
   border: none;
-  border-radius: 5px;
   color: white;
   padding: 12px 28px;
   text-align: center;
@@ -1336,6 +1365,26 @@ input[type="submit"] {
   font-size: 12px;
   margin: -4px 2px 0px 2px;
   cursor: pointer;
+}
+
+.wad-table-gap {
+  width: 10px; 
+  height: 10px;
+}
+
+.wad-routes > .wad-column-routes:nth-of-type(2) > p{
+  font-weight: bold; 
+  font-size: 18px;
+}
+
+.wad-routes > .wad-column-routes:nth-of-type(3) > p{
+  font-weight: bold; 
+  font-size: 14px; 
+  color: #336699;
+}
+
+.wad-routes > .wad-column-routes:nth-of-type(4) > p{
+  padding-bottom: 12px;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
@@ -1496,9 +1545,14 @@ input[type="submit"] {
   }
 }
 
+
 /* Table with Logos Ends */
 
 /* FAQ Cards Section Starts */
+
+.wad-easy-steps-heading{
+  margin-top: 30px;
+}
 
 .wad-faq-cards {
   display: flex;
@@ -1573,6 +1627,10 @@ input[type="submit"] {
   font-weight: 400;
   padding: 15px 4px;
   font-size: 14px;
+}
+
+.wad-faq-card1 h5 img, .wad-faq-card2 h5 img, .wad-faq-card3 h5 img {
+  width: 35px !important;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
@@ -1650,6 +1708,18 @@ input[type="submit"] {
 
 .wad-mango-table > .wad-mango-table-heading:nth-of-type(1) > p:nth-of-type(2) {
   margin-left: 48px;
+}
+
+.wad-mango-table-heading:nth-of-type(2) > p:nth-of-type(2), .wad-mango-table-heading:nth-of-type(2) > p:nth-of-type(3) {
+  color: #336699;
+}
+
+.wad-mango-table-heading:nth-of-type(3) > p:nth-of-type(2), .wad-mango-table-heading:nth-of-type(3) > p:nth-of-type(3) {
+  color: #336699;
+}
+
+.wad-mango-table-heading:nth-of-type(4) > p:nth-of-type(2), .wad-mango-table-heading:nth-of-type(4) > p:nth-of-type(3) {
+  color: #336699;
 }
 
 .wad-mango-table-heading p {
@@ -1799,6 +1869,21 @@ input[type="submit"] {
   clear: both;
 }
 
+.wad-row-time h2{
+  font-size: 27px; 
+  margin-bottom: 24px;
+}
+
+.wad-card-time > p:nth-of-type(1) {
+  font-size: 14px; 
+  color: grey; 
+  font-weight:bold;
+}
+
+.wad-card-time > p:nth-of-type(2) {
+  font-size: 14px;
+}
+
 .wad-column-time {
   float: left;
   width: 25%;
@@ -1904,6 +1989,10 @@ input[type="submit"] {
   flex-direction: column;
   justify-content: center;
 }
+.wad-image-content-right h3{
+  font-size: 25px;
+  color: #336699;
+}
 .wad-image-content-right > p {
   line-height: 32px;
 }
@@ -1927,7 +2016,7 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
+  h2 {
     line-height: 27px !important;
   }
 
@@ -1938,6 +2027,7 @@ input[type="submit"] {
 /* Image with information ends */
 
 /* Footer Starts  */
+
 
 .footer-image {
   display: flex;
@@ -2129,6 +2219,35 @@ input[type="submit"] {
   display: none;
 }
 
+.wad-ipad-footer1 a, .wad-ipad-footer2 a, .wad-ipad-footer3 a, .wad-ipad-footer4 a, .wad-ipad-footer5 a{
+  color: #E3BB59 !important;
+}
+
+.footer-logos-sponsors h3{
+  letter-spacing: 12px;
+}
+
+.footer-logos-sponsors h3 img{
+  width: 28px;
+  height: 28px;
+}
+
+.footer-logos-sponsors p img{
+  width: 52px;
+  height: 20px;
+}
+
+.footer-logos-deals div{
+  display: flex;
+}
+
+.wad-footer-flex{
+  display: flex; 
+  align-items: center;
+  justify-content: center ;
+  margin-top: 30px;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 481px) {
   .footer-rowz {
     padding-top: 25px;
@@ -2155,7 +2274,7 @@ input[type="submit"] {
   .footer-logos {
     margin-right: 0px;
   }
-  .footer-logos-logo{
+  .footer-logos-logo {
     margin-right: 25px;
   }
 }
@@ -2178,7 +2297,7 @@ input[type="submit"] {
     outline: none;
     font-size: 15px;
   }
-  x.collapsible:hover {
+   .collapsible:hover {
     background-color:#245489;
   }
   .content {
@@ -2200,6 +2319,7 @@ input[type="submit"] {
   .footer-mob-dropdown {
     margin-left: 16px;
     padding: 0;
+    color: #E3BB59;
   }
   .footer-mob-dropdown > h4 {
     font-size: 1rem;
@@ -2242,7 +2362,6 @@ input[type="submit"] {
   .subscribebox_input {
     padding-left: 20px !important;
   }
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -2266,6 +2385,7 @@ input[type="submit"] {
     display: flex;
   }
 }
+
 
 /* Footer Ends */
 

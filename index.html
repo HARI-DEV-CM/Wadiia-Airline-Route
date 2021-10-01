@@ -24,147 +24,228 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 <body onload="addAccordianEventListener()">
-    <div class="hamburger">
-        <div class="hamburger-line1"></div>
-        <div class="hamburger-line2"></div>
-        <div class="hamburger-line3"></div>
+  <div class="hamburger">
+      <div class="hamburger-line1"></div>
+      <div class="hamburger-line2"></div>
+      <div class="hamburger-line3"></div>
+    </div>
+    <ul class="menu">
+      <div class="hamburger-close">
+        <span class="close">&times;</span>
       </div>
-      <ul class="menu">
-        <div class="hamburger-close">
-          <span class="close">&times;</span>
+      <li>
+        <a class="menuLink" href="#">Flights</a>
+      </li>
+      <li>
+        <a class="menuLink" href="#">Deals</a>
+      </li>
+      <li>
+        <a class="menuLink" href="#">Activities</a>
+      </li>
+      <li>
+        <a class="menuLink" href="#">My Account</a>
+      </li>
+    </ul>
+    <div class="wad-search-row">
+      <div class="wad-row">
+        <object data="./utils/images/logo.svg" type="image/svg+xml"></object>
+      </div>
+      <div class="wad-column-head">
+        <a class="wad-column-head-center" href="#">
+          <object data="./utils/images/Icons high resolution/flights.png" type="image/png"></object>
+          <span>FLIGHTS</span>
+        </a>
+        <a class="wad-column-head-center" href="#">
+          <object data="./utils/images/Icons high resolution/deals.png" type="image/png"></object>
+          <span>DEALS</span>
+        </a>
+        <a class="wad-column-head-center" href="#">
+          <object data="./utils/images/Icons high resolution/activities.png" type="image/png"></object>
+          <span>ACTIVITIES</span>
+        </a>
+      </div>
+      <div class="wad-column-head-account dropdown">
+        <select id="country" name="country" class="account">
+          <option value="australia">My Account</option>
+        </select>
+      </div>
+    </div>
+    <div class="wad-nav-mob">
+      <div class="wad-row-mob">
+        <object data="./utils/images/logo.svg" type="image/svg+xml"></object>
+      </div>
+    </div>
+    <div class="wad-bottom-mob">
+    </div>
+    <div class="wad-row-button" >
+      <div class="wad-btn-container">
+        <input type="hidden" id="hiddenbutton" value="Round-Trip">
+        <div class="wad-column-button">
+          <button class="wad-compare-button" id="onewaybutton">One Way</button>
         </div>
-        <li>
-          <a class="menuLink" href="#">Flights</a>
-        </li>
-        <li>
-          <a class="menuLink" href="#">Deals</a>
-        </li>
-        <li>
-          <a class="menuLink" href="#">Activities</a>
-        </li>
-        <li>
-          <a class="menuLink" href="#">My Account</a>
-        </li>
-      </ul>
-      <div class="wad-search-row">
-        <div class="wad-row">
-          <object data="./utils/images/logo.svg" type="image/svg+xml" style="width:137.5px; height: 53.5px;"></object>
+        <div class="wad-column-button">
+          <button class="wad-compare-button wad-button-clicked" id="roundtripbutton">Round Trip</button>
         </div>
-        <div class="wad-column-head">
-          <a class="wad-column-head-center" href="#">
-            <object data="./utils/images/Icons high resolution/flights.png" type="image/png"></object>
-            <span>FLIGHTS</span>
-          </a>
-          <a class="wad-column-head-center" href="#">
-            <object data="./utils/images/Icons high resolution/deals.png" type="image/png"></object>
-            <span>DEALS</span>
-          </a>
-          <a class="wad-column-head-center" href="#">
-            <object data="./utils/images/Icons high resolution/activities.png" type="image/png"></object>
-            <span>ACTIVITIES</span>
-          </a>
-        </div>
-        <div class="wad-column-head-account dropdown">
-          <select id="country" name="country" class="account">
-            <option value="australia">My Account</option>
-          </select>
+        <div class="wad-column-button">
+          <button class="wad-compare-button" id="multicitybutton">Multi-City</button>
         </div>
       </div>
-      <div class="wad-nav-mob">
-        <div class="wad-row-mob">
-          <object data="./utils/images/logo.svg" type="image/svg+xml"></object>
+    </div>
+    <div class="wad-breadcrumbs">
+      <div class="wad-bc-row">
+        <p>Flights > </p>
+      </div>&nbsp;
+      <div class="wad-bc-row">
+        <p>South Africa > </p>
+      </div>&nbsp;
+      <div class="wad-bc-row">
+        <p>Cape Town - Johannesburg</p>
+      </div>
+    </div>
+    <div class="wad-from">
+      <br />
+      <div class="wad-pageroutes">
+        <div class="wad-routeheading">
+          <h1>Book Mango Flights from Durban to Johannesburg</h1>
         </div>
       </div>
-      <div class="wad-bottom-mob">
-      </div>
-      <div class="wad-row-button" >
-        <div class="wad-btn-container">
-          <input type="hidden" id="hiddenbutton" value="Round-Trip">
-          <div class="wad-column-button">
-            <button class="wad-compare-button" id="onewaybutton">One Way</button>
+      <br />
+      <div class="wad-searchbox">
+        <form onsubmit="redirectURL(); getcms(); return false">
+          <div id="radio">
+            <input type="radio" id="One-Way" value="One-Way" name="radio-button">
+            <label for="One-Way">One Way</label>
+            <input type="radio" id="Round-Trip" value="Round-Trip" name="radio-button" checked="checked" required>
+            <label for="Round-Trip">Round Trip</label>
+            <input type="radio" id="Multi-Trip" value="Multi-Trip" name="radio-button">
+            <label for="Multi-Trip">Multi Trip</label>
           </div>
-          <div class="wad-column-button">
-            <button class="wad-compare-button wad-button-clicked" id="roundtripbutton">Round Trip</button>
+          <div class="inputField searchfield">
+            <img src="./utils/images/route.svg" alt="" class="icon">
+            <input type="search2" id="departure" placeholder=" " autocomplete="off">
+            <span>Depart From</span>
           </div>
-          <div class="wad-column-button">
-            <button class="wad-compare-button" id="multicitybutton">Multi-City</button>
+          <div class="inputField searchfield">
+            <img src="./utils/images/route.svg" alt="" class="icon">
+            <input type="search2" id="arrival" placeholder=" " autocomplete="off">
+            <span>Arrival To</span>
           </div>
-        </div>
-      </div>
-      <div class="wad-breadcrumbs">
-        <div class="wad-bc-row">
-          <p>Flights > </p>
-        </div>&nbsp;
-        <div class="wad-bc-row">
-          <p>South Africa > </p>
-        </div>&nbsp;
-        <div class="wad-bc-row">
-          <p>Cape Town - Johannesburg</p>
-        </div>
-      </div>
-      <div class="wad-from">
-        <br />
-        <div class="wad-pageroutes">
-          <div class="wad-routeheading">
-            <h1>Book Mango Flights from Durban to Johannesburg</h1>
-          </div>
-        </div>
-        <br />
-        <div class="wad-searchbox">
-          <form onsubmit="redirectURL(); getcms(); return false">
-            <div id="radio">
-              <input type="radio" id="One-Way" value="One-Way" name="radio-button">
-              <label for="One-Way">One Way</label>
-              <input type="radio" id="Round-Trip" value="Round-Trip" name="radio-button" checked="checked" required>
-              <label for="Round-Trip">Round Trip</label>
-              <input type="radio" id="Multi-Trip" value="Multi-Trip" name="radio-button">
-              <label for="Multi-Trip">Multi Trip</label>
+          <div>
+            <div class="inputField date-search">
+              <img src="./utils/images/calendar (1).svg" alt="" class="icon">
+              <input type="search" id="departure-date" placeholder=" " autocomplete="off">&nbsp;
+              <span>Departure Date</span>
             </div>
-            <div class="inputField searchfield">
-              <img src="./utils/images/route.svg" alt="" class="icon">
-              <input type="search1" id="departure" placeholder=" " autocomplete="off">
+            <div class="inputField date-search">
+              <img src="./utils/images/calendar (1).svg" alt="" class="icon" id="arrival-icon">
+              <input type="search" id="arrival-date" placeholder=" " autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span id="spanarrival">Arrival Date</span>
+            </div>
+            <div class="inputField date-search">
+              <img src="./utils/images/group.svg" alt="" class="icon">
+              <input type="number" min="1" id="travellers" placeholder=" " autocomplete="off">
+              <span>No of Travellers</span>
+            </div>
+            <div class="inputField date-search">
+              <img src="./utils/images/airplane.svg" alt="" class="icon">
+              <input type="search" placeholder=" " id="class" list="journeyclass"  autocomplete="off" onfocus="this.value=''" onchange="this.blur();">
+              <span>Airline class</span>
+              <datalist id="journeyclass">
+                <option value="Business">
+                <option value="Economy">
+              </datalist>
+            </div>
+          </div>
+          <button class="wad-search-flight-btn-desktop" type="submit">
+            Search Flight
+          </button>
+        </form>
+  
+        <div class="wad-qbox">
+          <p><object data="./utils/images/Group 7.svg" type="image/svg+xml"></object>&nbsp;Why Book flights with Wadiia ?
+          </p>
+          <ul>
+            <li>
+              We will always be there for you.
+            </li>
+            <li>
+              We provide the most bang for your bauck.
+            </li>
+            <li>
+              We work quickly to resolve travel issues.
+            </li>
+            <li>
+              We follow through on our promises and commitments.
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+    <div class="wad-form-container-mob">
+    <form onsubmit="redirectMobURL(); getcmsmob(); return false">
+      <div class="wad-form-mob">
+        <div class="wad-form-tab row" >
+          <div class="col-md-6">
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/route.svg" alt="" class="icon1">
+              <input id="departure-mob" type="text" placeholder=" " autocomplete="off" required/>
               <span>Depart From</span>
             </div>
-            <div class="inputField searchfield">
-              <img src="./utils/images/route.svg" alt="" class="icon">
-              <input type="search1" id="arrival" placeholder=" " autocomplete="off">
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/route.svg" alt="" class="icon2">
+              <input id="arrival-mob" type="text" placeholder=" " autocomplete="off" required/>
               <span>Arrival To</span>
             </div>
-            <div>
-              <div class="inputField date-search">
-                <img src="./utils/images/calendar (1).svg" alt="" class="icon">
-                <input type="search" id="departure-date" placeholder=" " autocomplete="off">&nbsp;
-                <span>Departure Date</span>
-              </div>
-              <div class="inputField date-search">
-                <img src="./utils/images/calendar (1).svg" alt="" class="icon" id="arrival-icon">
-                <input type="search" id="arrival-date" placeholder=" " autocomplete="off">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span id="spanarrival">Arrival Date</span>
-              </div>
-              <div class="inputField date-search">
-                <img src="./utils/images/group.svg" alt="" class="icon">
-                <input type="number" min="1" id="travellers" placeholder=" " autocomplete="off">
-                <span>No of Travellers</span>
-              </div>
-              <div class="inputField date-search">
-                <img src="./utils/images/airplane.svg" alt="" class="icon">
-                <input type="search" placeholder=" " id="class" list="journeyclass"  autocomplete="off" onfocus="this.value=''" onchange="this.blur();">
-                <span>Airline class</span>
-                <datalist id="journeyclass">
-                  <option value="Business">
-                  <option value="Economy">
-                </datalist>
-              </div>
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/group.svg" alt="" class="icon5">
+              <input type="number" min="1" id="travellers-mob" placeholder=" " autocomplete="off" required/>
+              <span>No.of. Travellers</span>
             </div>
-            <button class="wad-search-flight-btn-desktop" type="submit">
-              Search Flight
-            </button>
-          </form>
-    
-          <div class="wad-qbox">
-            <p><object data="./utils/images/Group 7.svg" type="image/svg+xml"></object>&nbsp;Why Book flights with Wadiia ?
-            </p>
-            <ul style="margin-left: 48px;">
+          </div>
+          
+          <div class="col-md-6">
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/calendar (1).svg" alt="" class="icon3">
+              <input id="departure-date-mob" type="text" placeholder=" " autocomplete="off" required/>
+              <span>Depart Date</span>
+            </div>
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/calendar (1).svg" alt="" class="icon4" id="arrival-icon-mob">
+              <input id="arrival-date-mob" type="text" placeholder=" " autocomplete="off" required/>
+              <span id="spanarrivalmob">Arrival Date</span>
+            </div>
+            <div class="wad-form-input inputField">
+              <img src="./utils/images/airplane.svg" alt="" class="icon6">
+              <input type="text" id="class-mob" list="journeyclass-mob" placeholder=" " autocomplete="off" onfocus="this.value=''" onchange="this.blur();" required/>
+              <span>Airline Class</span>
+            <datalist id="journeyclass-mob">
+              <option value="Business">
+              <option value="Economy">
+            </datalist>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <!-- <div class="wad-form-sub-buttons">
+        <div>
+          <p>Non stop flights</p>
+        </div>
+        <div>
+          <p>Add another Traveller</p>
+        </div>
+      </div> -->
+      <button class="wad-search-flight-btn" onclick='redirectMobURL()'>
+        Search Flight
+      </button>
+    </form>
+      <div class="wad-form-details">
+        <div>
+          <p>
+            <object data="./utils/images/Group 7.svg" type="image/svg+xml"></object>&nbsp;Why Book flights with Wadiia ?
+          </p>
+          <div class="wad-form-ul">
+            <ul>
               <li>
                 We will always be there for you.
               </li>
@@ -180,94 +261,13 @@
             </ul>
           </div>
         </div>
-        
       </div>
-      <div class="wad-form-container-mob">
-        <form onsubmit="redirectMobURL(); getcmsmob(); return false">
-          <div class="wad-form-mob">
-            <div class="wad-form-tab row" >
-              <div class="col-md-6">
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/route.svg" alt="" class="icon1">
-                  <input style="width: 77%" id="departure-mob" type="text" placeholder=" " autocomplete="off" required/>
-                  <span>Depart From</span>
-                </div>
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/route.svg" alt="" class="icon2">
-                  <input style="width: 77%" id="arrival-mob" type="text" placeholder=" " autocomplete="off" required/>
-                  <span>Arrival To</span>
-                </div>
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/group.svg" alt="" class="icon5">
-                  <input style="width: 77%" type="number" min="1" id="travellers-mob" placeholder=" " autocomplete="off" required/>
-                  <span>No.of. Travellers</span>
-                </div>
-              </div>
-              
-              <div class="col-md-6">
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/calendar (1).svg" alt="" class="icon3">
-                  <input style="width: 77%" id="departure-date-mob" type="text" placeholder=" " autocomplete="off" required/>
-                  <span>Depart Date</span>
-                </div>
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/calendar (1).svg" alt="" class="icon4" id="arrival-icon-mob">
-                  <input style="width: 77%" id="arrival-date-mob" type="text" placeholder=" " autocomplete="off" required/>
-                  <span id="spanarrivalmob">Arrival Date</span>
-                </div>
-                <div class="wad-form-input inputField">
-                  <img src="./utils/images/airplane.svg" alt="" class="icon6">
-                  <input style="width: 77%" type="text" id="class-mob" list="journeyclass-mob" placeholder=" " autocomplete="off" onfocus="this.value=''" onchange="this.blur();" required/>
-                  <span>Airline Class</span>
-                <datalist id="journeyclass-mob">
-                  <option value="Business">
-                  <option value="Economy">
-                </datalist>
-                </div>
-              </div>  
-            </div>
-          </div>
-          <!-- <div class="wad-form-sub-buttons">
-            <div>
-              <p>Non stop flights</p>
-            </div>
-            <div>
-              <p>Add another Traveller</p>
-            </div>
-          </div> -->
-          <button class="wad-search-flight-btn" onclick='redirectMobURL()'>
-            Search Flight
-          </button>
-        </form>
-        <div class="wad-form-details">
-          <div>
-            <p>
-              <object data="./utils/images/Group 7.svg" type="image/svg+xml"></object>&nbsp;Why Book flights with Wadiia ?
-            </p>
-            <div class="wad-form-ul">
-              <ul>
-                <li>
-                  We will always be there for you.
-                </li>
-                <li>
-                  We provide the most bang for your bauck.
-                </li>
-                <li>
-                  We work quickly to resolve travel issues.
-                </li>
-                <li>
-                  We follow through on our promises and commitments.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
 
       <!-- Header with form section ends -->
 
       <!-- Coupon Starts  -->
-      <h1>Mango Flights Deals from Durban to Johannesburg</h1>
+      <h2>Mango Flights Deals from Durban to Johannesburg</h2>
       <div class="coupon-cou">
         <div class="container-cou">
           <div class="mangotop-cou">
@@ -348,12 +348,12 @@
       <!-- Image with information starts -->
 
       <div class="wad-image-content">
-        <h1>Flights from Durban to Johannesburg with Mango Airlines</h1>
+        <h2>Flights from Durban to Johannesburg with Mango Airlines</h2>
       <div class="wad-image-content-left">
         <img src="./utils/images/Mask Group 1/Mask Group 1@2x.png" alt="">
       </div>
       <div class="wad-image-content-right">
-        <h2 style="font-size: 25px;">Book Flight with Mango Airlines</h2>
+        <h3>Book Flight with Mango Airlines</h3>
         <p>Choose the best Mango Flights from Durban to Johannesburg with the eDreams search engine. you can find the best details from Durban to Johanesburg with Mangos thanks for our platform.</p>
         <p>By comarping from an array of factor such as timingsm price, dates or layovers you can find the options perfectly suited to your needs. with eDreams 'smart choice' we factor in your preferences and providew you with the cheapest option availabe. we'll help you save time finding the best mango Flights.</p>
         <p>with eDreams you wil be able to find Mango Flight from Durban to Jonnanesbarg at the most competitive price, save money on your flight bookings online with eDreams</p>
@@ -366,36 +366,36 @@
 
       <div>
         <div class="wad-row-time">
-          <h1 style="font-size: 27px; margin-bottom: 24px;">Route Information</h1>
+          <h2>Route Information</h2>
           <div class="wad-column-time">
             <div class="wad-card-time">
               <object data="./utils/images/Group 44.svg" type="image/svg+xml"></object>
-              <p style="font-size: 14px; color: grey; font-weight:bold;">Departure Airport</p>
-              <p style="font-size: 14px; ">KING SHAKA INTERNATIONAL AIRPORT (DUR)</p>
+              <p>Departure Airport</p>
+              <p>KING SHAKA INTERNATIONAL AIRPORT (DUR)</p>
             </div>
           </div>
     
           <div class="wad-column-time">
             <div class="wad-card-time">
               <object data="./utils/images/Group 45.svg" type="image/svg+xml"></object>
-              <p style="font-size: 14px; color: grey; font-weight:bold;">Arival Airport</p>
-              <p style="font-size: 14px; ">O.R TAMBO INTERNATIONAL OR LANSERIA INTERNATIONAL AIRPORT</p>
+              <p>Arival Airport</p>
+              <p>O.R TAMBO INTERNATIONAL OR LANSERIA INTERNATIONAL AIRPORT</p>
             </div>
           </div>
     
           <div class="wad-column-time">
             <div class="wad-card-time">
               <object data="./utils/images/Group 46.svg" type="image/svg+xml"></object>
-              <p style="font-size: 14px; color: grey; font-weight:bold;">Flight Duration</p>
-              <p style="font-size: 14px; ">65 MINUTES</p>
+              <p>Flight Duration</p>
+              <p>65 MINUTES</p>
             </div>
           </div>
     
           <div class="wad-column-time">
             <div class="wad-card-time">
               <object data="./utils/images/Group 47.svg" type="image/svg+xml"></object>
-              <p style="font-size: 14px; color: grey; font-weight:bold;">Flight Distance</p>
-              <p style="font-size: 14px; ">501 KM</p>
+              <p>Flight Distance</p>
+              <p>501 KM</p>
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@
       <!-- FAQ Section starts -->
 
       <div class='wad-faq'>
-        <h1 style="margin: auto 60px;">Things to know before booking your Mango Flights from Cape Town to Johannesburg</h1>
+        <h2>Things to know before booking your Mango Flights from Cape Town to Johannesburg</h2>
         <div class="wad-container-faq">
           <div class="wad-faq-qa">
             <button class="accordion1">About Johannesburg<i class="fa fa-plus" aria-hidden="true"></i></button>
@@ -447,7 +447,7 @@
       <div class="wad-top-mango-container">
         <div class="wad-top-mango-route">
           <div class="wad-top-mango-heading">
-            <h1>Top Mango Route</h1>
+            <h2>Top Mango Route</h2>
           </div>
           <br />
           <div class="wad-mango-table">
@@ -461,8 +461,8 @@
             <div class="wad-mango-table-heading">
               <p>CPT&nbsp;&nbsp;&nbsp;<object data="utils/images/aeroplane (1).svg"
                   type="image/svg+xml"></object>&nbsp;&nbsp;&nbsp;JNB</p>
-              <p style="color: #336699;">45 Minutes</p>
-              <p style="color: #336699;">6:16 PM</p>
+              <p>45 Minutes</p>
+              <p>6:16 PM</p>
               <div class="mango-search-button">
                 <p>From R950</p>
                 <button class="wad-search-buttonz">Search Flight</button>
@@ -472,8 +472,8 @@
             <div class="wad-mango-table-heading">
               <p>CPT&nbsp;&nbsp;&nbsp;<object data="utils/images/aeroplane (1).svg"
                   type="image/svg+xml"></object>&nbsp;&nbsp;&nbsp;DUR</p>
-              <p style="color: #336699;">45 Minutes</p>
-              <p style="color: #336699;">6:16 PM</p>
+              <p>45 Minutes</p>
+              <p>6:16 PM</p>
               <div class="mango-search-button">
                 <p>From R950</p>
                 <button class="wad-search-buttonz">Search Flight</button>
@@ -483,8 +483,8 @@
             <div class="wad-mango-table-heading">
               <p>DUR&nbsp;&nbsp;&nbsp;<object data="utils/images/aeroplane (1).svg"
                   type="image/svg+xml"></object>&nbsp;&nbsp;&nbsp;JNB</p>
-              <p style="color: #336699;">45 Minutes</p>
-              <p style="color: #336699;">6:16 PM</p>
+              <p>45 Minutes</p>
+              <p>6:16 PM</p>
               <div class="mango-search-button">
                 <p>From R950</p>
                 <button class="wad-search-buttonz">Search Flight</button>
@@ -501,7 +501,7 @@
 
       <!-- Table with Logos starts -->
 
-      <h1>Top Airlines Flying From Durban to Johannesburg</h1>
+      <h2>Top Airlines Flying From Durban to Johannesburg</h2>
       <div class="wad-search-routes-head">
         <div class="wad-routes-head">
           <div class="wad-column-routes-head1">
@@ -518,72 +518,73 @@
           </div>
         </div>
       </div>
-      <div style="width: 20px; height: 20px;"></div>
+      <div class="wad-table-gap"></div>
       <div class="wad-search-routes">
         <div class="wad-routes">
           <div class="wad-column-routes">
             <img src="./utils//images/flysafair/Image 1.png" alt="">
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 18px;">CPT <object data="./utils/images/aeroplane (1).svg"
+            <p>CPT <object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
             <br>
-            <p style="font-weight: bold; font-size: 18px;">CPT<object data="./utils/images/aeroplane (1).svg"
+            <p>CPT<object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 14px; color: #336699;">45 Minutes<br>Non-stop</p>
+            <p>45 Minutes<br>Non-stop</p>
           </div>
           <div class="wad-column-routes wad-column-routes-sub">
-            <p style="padding-bottom: 12px;">R1 126</p>
+            <p>R1 126</p>
             <button class="wad-search-button-routes">Book now</button>
           </div>
         </div>
       </div>
-      <div style="width: 10px; height: 10px;"></div>
+      <div class="wad-table-gap"></div>
       <div class="wad-search-routes">
         <div class="wad-routes">
           <div class="wad-column-routes">
             <img src="./utils//images/kulula/Image 2.png" alt="">
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 18px;">CPT <object data="./utils/images/aeroplane (1).svg"
+            <p>CPT <object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
             <br>
-            <p style="font-weight: bold; font-size: 18px;">CPT <object data="./utils/images/aeroplane (1).svg"
+            <p>CPT <object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 14px; color: #336699;">45 Minutes<br>Non-stop</p>
+            <p>45 Minutes<br>Non-stop</p>
           </div>
           <div class="wad-column-routes wad-column-routes-sub">
-            <p style="padding-bottom: 12px;">R1 126</p>
+            <p>R1 126</p>
             <button class="wad-search-button-routes">Book now</button>
           </div>
         </div>
       </div>
-      <div style="width: 10px; height: 10px;"></div>
+      <div class="wad-table-gap"></div>
       <div class="wad-search-routes">
         <div class="wad-routes">
           <div class="wad-column-routes">
             <img src="./utils//images/airlink/Image 3.png" alt="">
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 18px;">CPT <object data="./utils/images/aeroplane (1).svg"
+            <p>CPT <object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
             <br>
-            <p style="font-weight: bold; font-size: 18px;">CPT <object data="./utils/images/aeroplane (1).svg"
+            <p>CPT <object data="./utils/images/aeroplane (1).svg"
                 type="image/svg+xml"></object> JNB</p>
           </div>
           <div class="wad-column-routes">
-            <p style="font-weight: bold; font-size: 14px; color: #336699;">45 Minutes<br>Non-stop</p>
+            <p>45 Minutes<br>Non-stop</p>
           </div>
           <div class="wad-column-routes wad-column-routes-sub">
-            <p style="padding-bottom: 12px;">R1 126</p>
+            <p>R1 126</p>
             <button class="wad-search-button-routes">Book now</button>
           </div>
         </div>
       </div>
+
 
       <!-- Table with Logos Ends -->
 
@@ -591,7 +592,7 @@
 
        <div class='wad-faq'>
         <div class="wad-container-faq">
-          <h1 id="faqHeading">Frequently Asked Questions - Mango Flight From Durban to Johannesburg</h1>
+          <h2 id="faqHeading">Frequently Asked Questions - Mango Flight From Durban to Johannesburg</h2>
           <div class="wad-faq-qa" id="faqContainer">
             <button class="accordion1">What airplort do you fly from for flights from Durban to Johannesburg?<i class="fa fa-plus" aria-hidden="true"></i></button>
             <div class="panel1">
@@ -626,25 +627,25 @@
       <!-- FAQ Cards Section Starts -->
 
       <div>
-        <div style="margin-top: 30px;">
-          <h1>Easy Steps For Booking</h1>
+        <div class="wad-easy-steps-heading">
+          <h2>Easy Steps For Booking</h2>
         </div>
       <div class="wad-faq-cards">
     
         <div class="wad-faq-card1">
-          <h5><img src="./utils/images/Group 5.svg" alt="" style="width: 35px !important">&nbsp;
+          <h5><img src="./utils/images/Group 5.svg" alt="">&nbsp;
             How to book the cheapest flights</h5>
           <p>With Wadiia.com you'll get low prices and flexible booking options search and book now search and compare
             low-cost flights on wadiia.com you won't miss a cheap flight deal again. Search and book now. </p>
         </div>
         <div class="wad-faq-card2">
-          <h5><img src="./utils/images/Group 6.svg" alt="" style="width: 35px !important">&nbsp;
+          <h5><img src="./utils/images/Group 6.svg" alt="">&nbsp;
             Flexible cancellation<br /></h5>
           <p>Flexible cancellation is allowed. Waiving of change fees. Search flexible flights from Cape Town to
             Johannesburg </p>
         </div>
         <div class="wad-faq-card3">
-          <h5><img src="./utils/images/warning.svg" alt="" style="width: 35px !important">&nbsp;
+          <h5><img src="./utils/images/warning.svg" alt="">&nbsp;
             How to book the cheapest flights</h5>
           <p>The COVID-19 (coronavirus) outbreak may impact travel to Johannesburg from major cities across South Africa</p>
         </div>
@@ -662,77 +663,77 @@
       <footer>
     
         <div class="footer-mob">
-          <div class="footer-mob-dropdown" style="color: #E3BB59;">
-            <h4 class="collapsible">Top Cities &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-            <div class="content">
-              <ul>
-                <li><a href="#">Flights to London</a></li>
-                <li><a href="#">Flights to Dubai</a></li>
-                <li><a href="#">Flights to New York</a></li>
-                <li><a href="#">Flights to Delhi</a></li>
-                <li><a href="#">Flights to Lagos</a></li>
-                <li><a href="#">Flights to Cape Town</a></li>
-                <li><a href="#">Flights to Mumbai</a></li>
-                <br />
-                <li class="wad-ipad-footer1"><a href="#" style="color: #E3BB59;">All Cities>></a></li>
-              </ul>
-            </div>
-            <h4 class="collapsible">Top Airlines &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-            <div class="content">
-              <ul>
-                <li><a href="#">British Airways</a></li>
-                <li><a href="#">South African Airways</a></li>
-                <li><a href="#">Turkish Airlines</a></li>
-                <li><a href="#">Kenya Airways</a></li>
-                <li><a href="#">Delta Airlines</a></li>
-                <li><a href="#">Emirates</a></li>
-                <li><a href="#">Ethiopian Airlines</a></li>
-                <br />
-                <li class="wad-ipad-footer2"><a href="#" style="color: #E3BB59;">All Airlines>></a></li>
-              </ul>
-            </div>
-            <h4 class="collapsible">Top Domestic &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-            <div class="content">
-              <ul>
-                <li><a href="#">Cape Town Flights</a></li>
-                <li><a href="#">Johannesburg Flights</a></li>
-                <li><a href="#">Port Elizabeth Flights</a></li>
-                <li><a href="#">Durban Flights</a></li>
-                <li><a href="#">George Flights</a></li>
-                <li><a href="#">East London Flights</a></li>
-                <li><a href="#">Cape Town Flights</a></li>
-                <br />
-                <li class="wad-ipad-footer3"><a href="#" style="color: #E3BB59;">All Domestic Flights>></a></li>
-              </ul>
-            </div>
-            <h4 class="collapsible">Top Int'l Flights &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-            <div class="content">
-              <ul>
-                <li><a href="#">London Flights </a></li>
-                <li><a href="#">New York Flights </a></li>
-                <li><a href="#">Abu Dhabi Flights </a></li>
-                <li><a href="#">Amsterdam Flights </a></li>
-                <li><a href="#">Lagos Flights </a></li>
-                <li><a href="#">Nairobi Flights </a></li>
-                <li><a href="#">Accra Flights </a></li>
-                <br />
-                <li class="wad-ipad-footer4"><a href="#" style="color: #E3BB59;">All Int'l Flights>></a></li>
-              </ul>
-            </div>   
-            <h4 class="collapsible">Company &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
-            <div class="content">
-              <ul>
-                <li><a href="#">About Wadiia</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Help & Support</a></li>
-                <li><a href="#">Contact</a></li>
-                <br />
-                <li class="wad-ipad-footer5"><a href="#" style="color: #E3BB59;">Site Map>></a></li>
-              </ul>
-            </div>
+          <div class="footer-mob-dropdown">
+          <h4 class="collapsible">Top Cities &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+          <div class="content">
+            <ul>
+              <li><a href="#">Flights to London</a></li>
+              <li><a href="#">Flights to Dubai</a></li>
+              <li><a href="#">Flights to New York</a></li>
+              <li><a href="#">Flights to Delhi</a></li>
+              <li><a href="#">Flights to Lagos</a></li>
+              <li><a href="#">Flights to Cape Town</a></li>
+              <li><a href="#">Flights to Mumbai</a></li>
+              <br />
+              <li class="wad-ipad-footer1"><a href="#">All Cities>></a></li>
+            </ul>
+          </div>
+          <h4 class="collapsible">Top Airlines &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+          <div class="content">
+            <ul>
+              <li><a href="#">British Airways</a></li>
+              <li><a href="#">South African Airways</a></li>
+              <li><a href="#">Turkish Airlines</a></li>
+              <li><a href="#">Kenya Airways</a></li>
+              <li><a href="#">Delta Airlines</a></li>
+              <li><a href="#">Emirates</a></li>
+              <li><a href="#">Ethiopian Airlines</a></li>
+              <br />
+              <li class="wad-ipad-footer2"><a href="#">All Airlines>></a></li>
+            </ul>
+          </div>
+          <h4 class="collapsible">Top Domestic &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+          <div class="content">
+            <ul>
+              <li><a href="#">Cape Town Flights</a></li>
+              <li><a href="#">Johannesburg Flights</a></li>
+              <li><a href="#">Port Elizabeth Flights</a></li>
+              <li><a href="#">Durban Flights</a></li>
+              <li><a href="#">George Flights</a></li>
+              <li><a href="#">East London Flights</a></li>
+              <li><a href="#">Cape Town Flights</a></li>
+              <br />
+              <li class="wad-ipad-footer3"><a href="#">All Domestic Flights>></a></li>
+            </ul>
+          </div>
+          <h4 class="collapsible">Top Int'l Flights &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+          <div class="content">
+            <ul>
+              <li><a href="#">London Flights </a></li>
+              <li><a href="#">New York Flights </a></li>
+              <li><a href="#">Abu Dhabi Flights </a></li>
+              <li><a href="#">Amsterdam Flights </a></li>
+              <li><a href="#">Lagos Flights </a></li>
+              <li><a href="#">Nairobi Flights </a></li>
+              <li><a href="#">Accra Flights </a></li>
+              <br />
+              <li class="wad-ipad-footer4"><a href="#">All Int'l Flights>></a></li>
+            </ul>
+          </div>
+          <h4 class="collapsible">Company &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
+          <div class="content">
+            <ul>
+              <li><a href="#">About Wadiia</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Help & Support</a></li>
+              <li><a href="#">Contact</a></li>
+              <br />
+              <li class="wad-ipad-footer5"><a href="#">Site Map>></a></li>
+            </ul>
+          </div>
           </div>
         </div>
         <div class="footer">
@@ -749,7 +750,7 @@
                   <li><a href="#">Flights to Cape Town</a></li>
                   <li><a href="#">Flights to Mumbai</a></li>
                   <br />
-                  <li class="wad-ipad-footer1"><a href="#" style="color: #E3BB59;">All Cities>></a></li>
+                  <li class="wad-ipad-footer1"><a href="#">All Cities>></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -763,7 +764,7 @@
                   <li><a href="#">Emirates</a></li>
                   <li><a href="#">Ethiopian Airlines</a></li>
                   <br />
-                  <li class="wad-ipad-footer2"><a href="#" style="color: #E3BB59;">All Airlines>></a></li>
+                  <li class="wad-ipad-footer2"><a href="#">All Airlines>></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -777,7 +778,7 @@
                   <li><a href="#">East London Flights</a></li>
                   <li><a href="#">Cape Town Flights</a></li>
                   <br />
-                  <li class="wad-ipad-footer3"><a href="#" style="color: #E3BB59;">All Domestic Flights>></a></li>
+                  <li class="wad-ipad-footer3"><a href="#">All Domestic Flights>></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -791,7 +792,7 @@
                   <li><a href="#">Nairobi Flights </a></li>
                   <li><a href="#">Accra Flights </a></li>
                   <br />
-                  <li class="wad-ipad-footer4"><a href="#" style="color: #E3BB59;">All Int'l Flights>></a></li>
+                  <li class="wad-ipad-footer4"><a href="#">All Int'l Flights>></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -805,7 +806,7 @@
                   <li><a href="#">Help & Support</a></li>
                   <li><a href="#">Contact</a></li>
                   <br />
-                  <li class="wad-ipad-footer5"><a href="#" style="color: #E3BB59;">Site Map>></a></li>
+                  <li class="wad-ipad-footer5"><a href="#">Site Map>></a></li>
                 </ul>
               </div>
             </div>
@@ -855,23 +856,23 @@
           </div>
           <div class="footer-logos-sponsors ">
             <h5>Follow us and stay up to data on social media</h5>
-            <h2 style="letter-spacing: 12px;">
-              <img style="width: 28px;height: 28px;" src="./utils/images/Group 8.svg" />
-              <img style="width: 28px;height: 28px;" src="./utils/images/Group 9.svg" />
-              <img style="width: 28px;height: 28px;" src="./utils/images/Group 10.svg" />
-              <img style="width: 28px;height: 28px;" src="./utils/images/Group 11.svg" />
-              <img style="width: 28px;height: 28px;" src="./utils/images/Group 12.svg" />
-            </h2>
+            <h3>
+              <img src="./utils/images/Group 8.svg" />
+              <img src="./utils/images/Group 9.svg" />
+              <img src="./utils/images/Group 10.svg" />
+              <img src="./utils/images/Group 11.svg" />
+              <img src="./utils/images/Group 12.svg" />
+            </h3>
             <p>Secured by:
-              <img style="width: 52px;height: 20px;" src="./utils/images/Image 4.png" />
-              <img style="width: 52px;height: 20px;" src="./utils/images/Image 5.png" />
-              <img style="width: 52px;height: 16px;" src="./utils/images/Image 6.png" />
-              <img style="width: 52px;height: 26px;" src="./utils/images/Image 7.png" />
+              <img src="./utils/images/Image 4.png" />
+              <img src="./utils/images/Image 5.png" />
+              <img src="./utils/images/Image 6.png" />
+              <img src="./utils/images/Image 7.png" />
             </p>
           </div>
           <div class="footer-logos-deals ">
             <h5>Save more on your next trip with our great deals</h5>
-            <div style="display: flex;">
+            <div>
               <div class="wad-footer-logo-content">
                 <p>Sign up now to our newsletter for all the latest deals, exclusive offers on flights and more to top
                   destinations worldwide. You don't want to miss out!</p>
@@ -902,30 +903,31 @@
               </form>
             </div>
           </div>
-          <div style="display: flex; align-items: center;justify-content: center ;margin-top: 30px;">
+          <div class="wad-footer-flex">
             <div class="footer-logos-logo mob-hide">
               <object data="./utils/images/logo.svg" type="image/svg+xml"></object>
             </div>
             <div class="footer-logos-sponsors ">
               <h5>Follow us and stay up to data on social media</h5>
-              <h2 style="letter-spacing: 12px;">
-                <img style="width: 28px;height: 28px;" src="./utils/images/Group 8.svg" />
-                <img style="width: 28px;height: 28px;" src="./utils/images/Group 9.svg" />
-                <img style="width: 28px;height: 28px;" src="./utils/images/Group 10.svg" />
-                <img style="width: 28px;height: 28px;" src="./utils/images/Group 11.svg" />
-                <img style="width: 28px;height: 28px;" src="./utils/images/Group 12.svg" />
-              </h2>
+              <h3>
+                <img src="./utils/images/Group 8.svg" />
+                <img src="./utils/images/Group 9.svg" />
+                <img src="./utils/images/Group 10.svg" />
+                <img src="./utils/images/Group 11.svg" />
+                <img src="./utils/images/Group 12.svg" />
+              </h3>
               <p>Secured by:
-                <img style="width: 52px;height: 20px;" src="./utils/images/Image 4.png" />
-                <img style="width: 52px;height: 20px;" src="./utils/images/Image 5.png" />
-                <img style="width: 52px;height: 16px;" src="./utils/images/Image 6.png" />
-                <img style="width: 52px;height: 26px;" src="./utils/images/Image 7.png" />
+                <img src="./utils/images/Image 4.png" />
+                <img src="./utils/images/Image 5.png" />
+                <img src="./utils/images/Image 6.png" />
+                <img src="./utils/images/Image 7.png" />
               </p>
             </div>
           </div>
         </div>
       </footer>
 
+     
       <!-- Footer Ends -->
 
 
