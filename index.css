@@ -33,15 +33,12 @@ h1 {
   text-align: center;
 }
 
-
 h2 {
   font-size: 30px !important;
   color: #336699;
   font-weight: bold !important;
   text-align: center;
 }
-
-
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -160,7 +157,7 @@ select.account {
   align-items: center;
   height: 46px;
   background-color: var(--breadcrumb-box-color);
-  padding: 28px 0px 13px 60px;
+  padding: 28px 0px 13px 4.9vw;
   color: #ffffff;
   margin-top: -30px;
 }
@@ -187,8 +184,18 @@ select.account {
 
 .wad-searchbox {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.wad-searchbox > form{
+  margin-left: 4.9vw;
+}
+
+.wad-third-row {
+  display: flex;
+  justify-content: space-between;
+  width: 57vw;
 }
 
 .icon {
@@ -209,9 +216,10 @@ select.account {
   padding: 10px 10px 13px 10px;
   border: solid 1px #6b86ab;
   border-radius: 5px;
-  margin-left: 25px;
+  margin-left: 0;
   color: #336699;
   font-size: 20px;
+  margin-right: 4.9vw;
 }
 
 .wad-qbox p {
@@ -398,27 +406,27 @@ input[type="radio"] {
 input[type="search2"] {
   border-radius: 5px;
   padding: 12px 10px 0px 71px;
-  width: 780px;
+  width: 57vw;
   height: 52px;
   background-color: #f6f9fe;
   /* background: url(./utils/images/route.svg)
     no-repeat 9px center; */
   border: solid 1px var(--borderbox-color);
-  -webkit-transition: all 0.5s;
+  /* -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  transition: all 0.5s; */
 }
 input[type="search2"] {
   border-radius: 5px;
   padding: 12px 10px 0px 71px;
-  width: 780px;
+  width: 57vw;
   height: 52px;
   background-color: #f6f9fe;
   /* background: url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center; */
   border: solid 1px var(--borderbox-color);
-  -webkit-transition: all 0.5s;
+  /* -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
-  transition: all 0.5s;
+  transition: all 0.5s; */
 }
 input[type="text"],
 select {
@@ -444,8 +452,8 @@ input[type="submit"] {
 }
 
 .wad-search-flight-btn-desktop {
-  display: table;
-  margin-left: 568px;
+  /* display: table;
+  margin-left: 568px; */
   width: 216px;
   margin-top: 16px;
   background-color: red;
@@ -455,6 +463,9 @@ input[type="submit"] {
   text-align: center;
   color: white;
   align-items: center;
+}
+.wad-search-flight-btn-desktop-div {
+  text-align: right;
 }
 .inputField {
   position: relative;
@@ -1066,7 +1077,7 @@ input[type="submit"] {
 
   .wad-search-flight-btn {
     margin-left: 12px;
-    margin-right: 14px;
+    /* margin-right: 14px; */
   }
 
   .wad-form-details > div > p > object {
@@ -1901,7 +1912,7 @@ input[type="submit"] {
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
   .wad-row-time {
-    margin-top: 72px !important;
+    /* margin-top: 72px !important; */
     margin: 40px 8%;
     text-align: center;
   }
@@ -1961,6 +1972,7 @@ input[type="submit"] {
 
   .wad-row-time {
     margin: 0px 0 0 0;
+    padding: 0px 16px 40px 16px;
   }
 }
 
@@ -2023,6 +2035,12 @@ input[type="submit"] {
   .wad-image-content {
     padding: 40px 0px 0px 0px;
   }
+  .wad-image-content-right p{
+    font-size: 14px;
+  }
+  .wad-image-content-right h3 {
+    font-size: 20px;
+}
 }
 /* Image with information ends */
 
@@ -2075,7 +2093,7 @@ input[type="submit"] {
   margin-bottom: 30px;
   font-weight: 500;
   position: relative;
-  color: #e3bc59;
+  color: #e3bb59;
 }
 .footer-column h4::before {
   content: "";
@@ -2116,7 +2134,7 @@ input[type="submit"] {
   margin-left: 50px;
   font-weight: 400;
   position: relative;
-  color: #e3bc59;
+  color: #e3bb59;
 }
 .footer-column-2 h4::before {
   content: "";
@@ -2141,7 +2159,7 @@ input[type="submit"] {
 
 .footer-logos {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 220px;
   margin-right: 119px;
