@@ -34,16 +34,16 @@
       <span class="close">&times;</span>
     </div>
     <li>
-      <a class="menuLink" href="#">Flights</a>
+      <a class="menuLink" href="#"><object data="./utils/images/Icons high resolution/flights.png" type="image/png"></object>FLIGHTS</a>
     </li>
     <li>
-      <a class="menuLink" href="#">Deals</a>
+      <a class="menuLink" href="#"><object data="./utils/images/Icons high resolution/deals.png" type="image/png"></object>DEALS</a>
     </li>
     <li>
-      <a class="menuLink" href="#">Activities</a>
+      <a class="menuLink" href="#"><object data="./utils/images/Icons high resolution/activities.png" type="image/png"></object>ACTIVITIES</a>
     </li>
     <li>
-      <a class="menuLink" href="#">My Account</a>
+      <a class="menuLink" href="#"><i class="fa fa-user" aria-hidden="true"></i>MY ACCOUNT</a>
     </li>
   </ul>
   <div class="wad-search-row">
@@ -75,9 +75,14 @@
       <object data="./utils/images/logo.svg" type="image/svg+xml"></object>
     </div>
   </div>
-  <div class="wad-bottom-mob">
-    <p>Flights > South Africa > Cape Town - Junnesburg</p>
-  </div>
+  <section id="wd-breadcrumb-mob">
+    <ul class="custom-container">
+      <li><a href="">Flights ></a></li>
+      <li><a href="">South Africa ></a></li>
+      <li><a href="">Cape Town -</a></li>
+      <li><a href="">Johansburg</a></li>
+    </ul>
+  </section>
   <div class="wad-mob-heading">
     <h2>Book Cheap Mango Flights</h2>
   </div>
@@ -95,25 +100,20 @@
       </div>
     </div>
   </div>
-  <div class="wad-breadcrumbs">
-    <div class="wad-bc-row">
-      <p>Flights > </p>
-    </div>&nbsp;
-    <div class="wad-bc-row">
-      <p>South Africa > </p>
-    </div>&nbsp;
-    <div class="wad-bc-row">
-      <p>Cape Town - Junnesburg</p>
-    </div>
-  </div>
+ 
+<section id="wd-breadcrumb">
+  <ul class="custom-container">
+    <li><a href="">Flights ></a></li>
+    <li><a href="">South Africa ></a></li>
+    <li><a href="">Cape Town -</a></li>
+    <li><a href="">Johansburg</a></li>
+  </ul>
+</section>
+
   <div class="wad-from">
-    <br />
     <div class="wad-pageroutes">
-      <div class="wad-routeheading">
         <h1>Book Mango Flights from Durban to Johannesburg</h1>
-      </div>
     </div>
-    <br />
     <div class="wad-searchbox">
       <form onsubmit="redirectURL(); getcms(); return false">
         <div id="radio">
@@ -269,8 +269,7 @@
         </div>
       </div>
     </div>
-
-      <!-- Header with form section ends -->
+    <!-- Header with Form section ends -->
 
       <!-- Coupon Starts  -->
       <h2>Mango Flights Deals from Durban to Johannesburg</h2>
@@ -368,46 +367,47 @@
 
       <!-- Image with information ends -->
 
-      <!-- Route Information Starts -->
+      <!-- Route information 1 starts -->
 
-      <div>
-        <div class="wad-row-time">
+      <div class="custom-container">
+
+        <section class="wd-generic-info">
           <h2>Route Information</h2>
-          <div class="wad-column-time">
-            <div class="wad-card-time">
-              <object data="./utils/images/Group 44.svg" type="image/svg+xml"></object>
-              <p>Departure Airport</p>
-              <p>KING SHAKA INTERNATIONAL AIRPORT (DUR)</p>
+          <div class="row">
+            <div class="col-md-6 col-6 col-xl-3">
+              <div class="wd-common-white-card">
+                <object data="./utils/images/Group 44.svg" type="image/svg+xml"></object>
+                <span class="wd-gi-tag">Departure Airport</span>
+                <div class="wd-gi-common-title">KING SHAKA INTERNATIONAL AIRPORT (DUR)</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-6 col-xl-3">
+              <div class="wd-common-white-card">
+                <object data="./utils/images/Group 45.svg" type="image/svg+xml"></object>
+                <span class="wd-gi-tag">Arrival Airport</span>
+                <div class="wd-gi-common-title">O.R TAMBO INTERNATIONAL OR LANSERIA INTERNATIONAL AIRPORT</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-6 col-xl-3">
+              <div class="wd-common-white-card">
+                <object data="./utils/images/Group 46.svg" type="image/svg+xml"></object>
+                <span class="wd-gi-tag">Flight Duration</span>
+                <div class="wd-gi-common-title">65 MINUTES</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-6 col-xl-3">
+              <div class="wd-common-white-card">
+                <object data="./utils/images/Group 47.svg" type="image/svg+xml"></object>
+                <span class="wd-gi-tag">Flight Distance</span>
+                <div class="wd-gi-common-title">501 KM</div>
+              </div>
             </div>
           </div>
-    
-          <div class="wad-column-time">
-            <div class="wad-card-time">
-              <object data="./utils/images/Group 45.svg" type="image/svg+xml"></object>
-              <p>Arival Airport</p>
-              <p>O.R TAMBO INTERNATIONAL OR LANSERIA INTERNATIONAL AIRPORT</p>
-            </div>
-          </div>
-    
-          <div class="wad-column-time">
-            <div class="wad-card-time">
-              <object data="./utils/images/Group 46.svg" type="image/svg+xml"></object>
-              <p>Flight Duration</p>
-              <p>65 MINUTES</p>
-            </div>
-          </div>
-    
-          <div class="wad-column-time">
-            <div class="wad-card-time">
-              <object data="./utils/images/Group 47.svg" type="image/svg+xml"></object>
-              <p>Flight Distance</p>
-              <p>501 KM</p>
-            </div>
-          </div>
-        </div>
+        </section><!--/wd-generic-info-->
+  
       </div>
 
-      <!-- Route Information Ends -->
+      <!-- Route information 1 ends -->
 
       <!-- FAQ Section starts -->
 
@@ -508,88 +508,62 @@
       <!-- Table with Logos starts -->
 
       <h2>Top Airlines Flying From Durban to Johannesburg</h2>
-      <div class="wad-search-routes-head">
-        <div class="wad-routes-head">
-          <div class="wad-column-routes-head1">
-            <p>Flight Routes</p>
-          </div>
-          <div class="wad-column-routes-head2">
-            <p>Flight Duration</p>
-          </div>
-          <div class="wad-column-routes-head3">
-            <p>Departure Time</p>
-          </div>
-          <div class="wad-column-routes-head4">
-            <p>Price</p>
-          </div>
-        </div>
-      </div>
-      <div class="wad-table-gap"></div>
-      <div class="wad-search-routes">
-        <div class="wad-routes">
-          <div class="wad-column-routes">
-            <img src="./utils//images/flysafair/Image 1.png" alt="">
-          </div>
-          <div class="wad-column-routes">
-            <p>CPT <object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-            <br>
-            <p>CPT<object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-          </div>
-          <div class="wad-column-routes">
-            <p>45 Minutes<br>Non-stop</p>
-          </div>
-          <div class="wad-column-routes wad-column-routes-sub">
-            <p>R1 126</p>
-            <button class="wad-search-button-routes">Book now</button>
-          </div>
-        </div>
-      </div>
-      <div class="wad-table-gap"></div>
-      <div class="wad-search-routes">
-        <div class="wad-routes">
-          <div class="wad-column-routes">
-            <img src="./utils//images/kulula/Image 2.png" alt="">
-          </div>
-          <div class="wad-column-routes">
-            <p>CPT <object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-            <br>
-            <p>CPT <object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-          </div>
-          <div class="wad-column-routes">
-            <p>45 Minutes<br>Non-stop</p>
-          </div>
-          <div class="wad-column-routes wad-column-routes-sub">
-            <p>R1 126</p>
-            <button class="wad-search-button-routes">Book now</button>
-          </div>
-        </div>
-      </div>
-      <div class="wad-table-gap"></div>
-      <div class="wad-search-routes">
-        <div class="wad-routes">
-          <div class="wad-column-routes">
-            <img src="./utils//images/airlink/Image 3.png" alt="">
-          </div>
-          <div class="wad-column-routes">
-            <p>CPT <object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-            <br>
-            <p>CPT <object data="./utils/images/aeroplane (1).svg"
-                type="image/svg+xml"></object> JNB</p>
-          </div>
-          <div class="wad-column-routes">
-            <p>45 Minutes<br>Non-stop</p>
-          </div>
-          <div class="wad-column-routes wad-column-routes-sub">
-            <p>R1 126</p>
-            <button class="wad-search-button-routes">Book now</button>
-          </div>
-        </div>
-      </div>
+      <table class="wad-logo-table">
+        <tr>
+          <th>Flight Routes</th>
+          <th>Flight Duration</th>
+          <th>Departure Time</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+            <td class="wad-logo-table-first">
+                <img src="./utils//images/flysafair/Image 1.png" alt="">
+            </td>
+            <td class="wad-logo-table-second">
+                <p class="wad-logo-table-second-para">CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+                <p>CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+            </td>
+            <td class="wad-logo-table-third">
+                <p>45 Minutes<br>Non-stop</p>
+            </td>
+            <td class="wad-logo-table-fourth">
+                <p>R1 126</p>
+                <a class="wad-search-button-routes">Book now</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="wad-logo-table-first">
+                <img src="./utils//images/kulula/Image 2.png" alt="">
+            </td>
+            <td class="wad-logo-table-second">
+                <p class="wad-logo-table-second-para">CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+                <p>CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+            </td>
+            <td class="wad-logo-table-third">
+                <p>45 Minutes<br>Non-stop</p>
+            </td>
+            <td class="wad-logo-table-fourth">
+                <p>R1 126</p>
+                <a class="wad-search-button-routes">Book now</a>
+            </td>
+        </tr>
+        <tr>
+            <td class="wad-logo-table-first">
+                <img src="./utils//images/airlink/Image 3.png" alt="">
+            </td>
+            <td class="wad-logo-table-second">
+                <p class="wad-logo-table-second-para">CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+                <p>CPT <object data="./utils/images/aeroplane (1).svg" type="image/svg+xml"></object>JNB</p>
+            </td>
+            <td class="wad-logo-table-third">
+                <p>45 Minutes<br>Non-stop</p>
+            </td>
+            <td class="wad-logo-table-fourth">
+                <p>R1 126</p>
+                <a class="wad-search-button-routes">Book now</a>
+            </td>
+        </tr>
+      </table>
 
 
       <!-- Table with Logos Ends -->
@@ -681,7 +655,7 @@
               <li><a href="#">Flights to Cape Town</a></li>
               <li><a href="#">Flights to Mumbai</a></li>
               <br />
-              <li class="wad-ipad-footer1"><a href="#">All Cities>></a></li>
+              <li class="wad-ipad-footer1"><a href="#">All Cities >></a></li>
             </ul>
           </div>
           <h4 class="collapsible">Top Airlines &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
@@ -695,7 +669,7 @@
               <li><a href="#">Emirates</a></li>
               <li><a href="#">Ethiopian Airlines</a></li>
               <br />
-              <li class="wad-ipad-footer2"><a href="#">All Airlines>></a></li>
+              <li class="wad-ipad-footer2"><a href="#">All Airlines >></a></li>
             </ul>
           </div>
           <h4 class="collapsible">Top Domestic &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
@@ -709,7 +683,7 @@
               <li><a href="#">East London Flights</a></li>
               <li><a href="#">Cape Town Flights</a></li>
               <br />
-              <li class="wad-ipad-footer3"><a href="#">All Domestic Flights>></a></li>
+              <li class="wad-ipad-footer3"><a href="#">All Domestic Flights >></a></li>
             </ul>
           </div>
           <h4 class="collapsible">Top Int'l Flights &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i></h4>
@@ -737,7 +711,7 @@
               <li><a href="#">Help & Support</a></li>
               <li><a href="#">Contact</a></li>
               <br />
-              <li class="wad-ipad-footer5"><a href="#">Site Map>></a></li>
+              <li class="wad-ipad-footer5"><a href="#">Site Map >></a></li>
             </ul>
           </div>
           </div>
@@ -756,7 +730,7 @@
                   <li><a href="#">Flights to Cape Town</a></li>
                   <li><a href="#">Flights to Mumbai</a></li>
                   <br />
-                  <li class="wad-ipad-footer1"><a href="#">All Cities>></a></li>
+                  <li class="wad-ipad-footer1"><a href="#">All Cities >></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -770,7 +744,7 @@
                   <li><a href="#">Emirates</a></li>
                   <li><a href="#">Ethiopian Airlines</a></li>
                   <br />
-                  <li class="wad-ipad-footer2"><a href="#">All Airlines>></a></li>
+                  <li class="wad-ipad-footer2"><a href="#">All Airlines >></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -784,7 +758,7 @@
                   <li><a href="#">East London Flights</a></li>
                   <li><a href="#">Cape Town Flights</a></li>
                   <br />
-                  <li class="wad-ipad-footer3"><a href="#">All Domestic Flights>></a></li>
+                  <li class="wad-ipad-footer3"><a href="#">All Domestic Flights >></a></li>
                 </ul>
               </div>
               <div class="footer-column">
@@ -812,7 +786,7 @@
                   <li><a href="#">Help & Support</a></li>
                   <li><a href="#">Contact</a></li>
                   <br />
-                  <li class="wad-ipad-footer5"><a href="#">Site Map>></a></li>
+                  <li class="wad-ipad-footer5"><a href="#">Site Map >></a></li>
                 </ul>
               </div>
             </div>
