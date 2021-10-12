@@ -1107,6 +1107,10 @@ input[type="submit"] {
   font-size: 20px;
 }
 
+.panel1 p {
+  margin-bottom: 0 !important;
+}
+
 @media only screen and (max-width: 768px) and (min-width: 481px) {
   .wad-faq {
     margin-top: 16px;
