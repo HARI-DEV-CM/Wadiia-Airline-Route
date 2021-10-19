@@ -729,8 +729,8 @@ input[type="submit"] {
     font-size: 3rem;
     color: black;
   }
-  #wd-breadcrumb {
-    font-size: 14px;
+  #wd-breadcrumb a{
+    font-size: 12px;
   }
   .custom-container {
     width: 92%;
@@ -1239,6 +1239,7 @@ input[type="submit"] {
   font-size: 15px;
   margin: -4px 2px 0px 2px;
   cursor: pointer;
+  border-radius: 6px;
 }
 .wad-logo-table-second-para {
     margin-bottom: 14px !important;
@@ -1681,7 +1682,7 @@ input[type="submit"] {
   text-transform: uppercase;
   color: #000;
   font-size: 16px;
-  font-weight: 500;
+  /* font-weight: 500; */
   margin: 0 24px;
 }
 .wd-gi-tag{
@@ -1689,6 +1690,7 @@ input[type="submit"] {
   font-size: 14px;
   margin: 18px 0 8px;
   display: block;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 580px){
